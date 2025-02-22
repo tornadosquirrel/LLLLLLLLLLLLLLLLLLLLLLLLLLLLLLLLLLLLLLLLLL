@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>다이얼 패드</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="dial-row">
+      <button class="dial">1</button>
+      <button class="dial">2</button>
+      <button class="dial">3</button>
+    </div>
+    <div class="dial-row">
+      <button class="dial">4</button>
+      <button class="dial">5</button>
+      <button class="dial">6</button>
+    </div>
+    <div class="dial-row">
+      <button class="dial">7</button>
+      <button class="dial">8</button>
+      <button class="dial">9</button>
+    </div>
+    <div class="dial-row">
+      <button class="dial">00</button>
+      <button class="dial">0</button>
+      <button class="dial">000</button>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('button.dial').forEach(button => {
+      button.addEventListener('click', () => {
+        button.classList.add('clicked');
+        setTimeout(() => {
+          button.classList.remove('clicked');
+        }, 800); // 트랜지션 시간과 동일하게 설정
+      });
+    });
+  </script>
+</body>
+
+</html>

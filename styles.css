@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Tenada';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #B0BEC5;
+}
+
+#container {
+  height: 700px;
+  width: 500px;
+  background-color: #1E3A78;
+  box-shadow: 10px 10px 0px 10px #F2E7D5;
+  border-radius: 30px;
+  transform: rotate3d(2, -1, 2, 70deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-right: 6px;
+  transition: all 0.5s ease-out;
+}
+
+.dial-row {
+  display: flex;
+  width: 95%;
+  justify-content: space-around;
+}
+
+button {
+  font-family: 'Tenada';
+  color: #FFFFFF;
+  font-size: 40px;
+  background-color: #40E0D0;
+  width: 100px;
+  height: 100px;
+  border: 7px solid #007B7F;
+  border-radius: 15px;
+  box-shadow: 4px 4px 0px 4px #FF6F61;
+  transition: all 0.8s;
+  user-select: none;
+}
+
+/* button:active {
+  transform: translate(12px, 12px);
+  box-shadow: 0px 0px 0px 0px #FF6F61;
+} */
+
+button.clicked {
+  transform: translate(12px, 12px);
+  box-shadow: 0px 0px 0px 0px #FF6F61;
+}
